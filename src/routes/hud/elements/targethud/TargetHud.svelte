@@ -2,7 +2,7 @@
     import {listen} from "../../../../integration/ws.js";
     import type {PlayerData} from "../../../../integration/types";
     import {REST_BASE} from "../../../../integration/host";
-    import {fade, fly} from "svelte/transition";
+    import {fade} from "svelte/transition";
     import HealthProgress from "./HealthProgress.svelte";
     import type {TargetChangeEvent} from "../../../../integration/events";
 
@@ -54,7 +54,7 @@
 <style lang="scss">
     @import "../../../../colors.scss";
 
-    .targethud {                        // WARNING SHITCODE AHEAD
+    .targethud {
         //position: fixed;
         //top: 50%;
         //left: calc(50% + 20px);
