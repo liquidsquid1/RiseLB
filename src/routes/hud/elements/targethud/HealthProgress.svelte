@@ -19,8 +19,8 @@
     }
 
     .thumb {
-        height: 3px;
-        background-color: $hotbar-health-color;
+        height: 8px;
+        background-color: $accent-color;
         transition: ease width 0.5s;
         border-radius: 12px;
     }

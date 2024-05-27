@@ -238,18 +238,18 @@
       "value": [
         {
           "name": "Enabled",
-          "value": false
+          "value": true
         },
         {
           "name": "Alignment",
           "value": [
             {
               "name": "Horizontal",
-              "value": "Center"
+              "value": "CenterTranslated"
             },
             {
               "name": "HorizontalOffset",
-              "value": 20
+              "value": 200
             },
             {
               "name": "Vertical",

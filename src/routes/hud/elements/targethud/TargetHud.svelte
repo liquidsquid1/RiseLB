@@ -60,7 +60,7 @@
         //left: calc(50% + 20px);
         //transform: translateY(-50%); // overwrites the component transform
         width: 220px;
-        background-color: rgba($targethud-base-color, $transparency);
+        background-color: rgba(0, 0, 0, 0.4);
         border-radius: 12px;
         overflow: hidden;
         border-bottom: 3px;
@@ -102,6 +102,14 @@
                 display: inline-block;
             }
         }
+    }
+
+    .armor-stats {
+        grid-area: d;
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+        padding-left: 5px;
     }
 
     .avatar {
