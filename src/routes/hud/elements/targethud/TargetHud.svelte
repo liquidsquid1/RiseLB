@@ -104,14 +104,6 @@
         }
     }
 
-    .armor-stats {
-        grid-area: d;
-        display: flex;
-        align-items: center;
-        column-gap: 10px;
-        padding-left: 5px;
-    }
-
     .avatar {
         grid-area: a;
         height: 50px;
