@@ -1,9 +1,8 @@
 <script lang="ts">
-    import ArmorStatus from "./ArmorStatus.svelte";
     import {listen} from "../../../../integration/ws.js";
     import type {PlayerData} from "../../../../integration/types";
     import {REST_BASE} from "../../../../integration/host";
-    import {fly} from "svelte/transition";
+    import {fade} from "svelte/transition";
     import HealthProgress from "./HealthProgress.svelte";
     import type {TargetChangeEvent} from "../../../../integration/events";
 
@@ -29,7 +28,7 @@
 </script>
 
 {#if visible && target != null}
-    <div class="targethud" transition:fly={{ y: -10, duration: 200 }}>
+    <div class="targethud" transition:fade|global={{duration: 200}}>
         <div class="main-wrapper">
             <div class="avatar">
                 <img src="{REST_BASE}/api/v1/client/resource/skin?uuid={target.uuid}" alt="avatar" />
@@ -45,28 +44,6 @@
                             alt="health"
                     />
                 </div>
-                <div class="stat">
-                    <div class="value">{Math.floor(target.armor)}</div>
-                    <img
-                            class="icon"
-                            src="img/hud/targethud/icon-armor.svg"
-                            alt="armor"
-                    />
-                </div>
-            </div>
-            <div class="armor-stats">
-                {#if target.armorItems[3].count > 0}
-                    <ArmorStatus itemStack={target.armorItems[3]} />
-                {/if}
-                {#if target.armorItems[2].count > 0}
-                    <ArmorStatus itemStack={target.armorItems[2]} />
-                {/if}
-                {#if target.armorItems[1].count > 0}
-                    <ArmorStatus itemStack={target.armorItems[1]} />
-                {/if}
-                {#if target.armorItems[0].count > 0}
-                    <ArmorStatus itemStack={target.armorItems[0]} />
-                {/if}
             </div>
         </div>    
         
@@ -82,9 +59,12 @@
         //top: 50%;
         //left: calc(50% + 20px);
         //transform: translateY(-50%); // overwrites the component transform
-        background-color: rgba($targethud-base-color, 0.68);
-        border-radius: 5px;
+        width: 220px;
+        background-color: rgba($targethud-base-color, $transparency);
+        border-radius: 12px;
         overflow: hidden;
+        border-bottom: 3px;
+        animation: 0.5s fade;
     }
 
     .main-wrapper {
@@ -93,20 +73,26 @@
             "a b d"
             "a c d";
         column-gap: 10px;
-        padding: 10px 15px;
+        padding-top: 10px;
+        padding-bottom: 7px;
+        padding-left: 10px;
     }
 
     .name {
-        grid-area: b;
+        grid-area: a;
         color: $targethud-text-color;
         font-weight: 500;
-        align-self: flex-end;
+        align-self: flex-start;
+        padding-left: 58px;
+        padding-top: 5px;
     }
 
     .health-stats {
-        grid-area: c;
-        display: flex;
+        grid-area: a;
+        align-self: flex-end;
         column-gap: 10px;
+        padding-left: 58px;
+        padding-bottom: 5px;
 
         .stat {
             .value {
@@ -118,14 +104,6 @@
         }
     }
 
-    .armor-stats {
-        grid-area: d;
-        display: flex;
-        align-items: center;
-        column-gap: 10px;
-        padding-left: 5px;
-    }
-
     .avatar {
         grid-area: a;
         height: 50px;
@@ -135,7 +113,7 @@
         background-image: url("/img/steve.png");
         background-repeat: no-repeat;
         background-size: cover;
-        border-radius: 5px;
+        border-radius: 6px;
         overflow: hidden;
 
         img {
