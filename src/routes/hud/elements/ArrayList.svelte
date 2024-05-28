@@ -15,8 +15,8 @@
             .filter((m) => m.enabled && !m.hidden)
             .sort(
                 (a, b) =>
-                    getTextWidth($spaceSeperatedNames ? convertToSpacedString(b.name) : b.name, "500 14px Inter") -
-                    getTextWidth($spaceSeperatedNames ? convertToSpacedString(a.name) : a.name, "500 14px Inter"),
+                    getTextWidth($spaceSeperatedNames ? convertToSpacedString(b.name).toLowerCase() : b.name.toLowerCase(), "400 16px Product Sans") -
+                    getTextWidth($spaceSeperatedNames ? convertToSpacedString(a.name).toLowerCase() : a.name.toLowerCase(), "400 16px Product Sans"),
             );
     }
 
@@ -48,28 +48,28 @@
 <style lang="scss">
     @import "../../../colors.scss";
 
+    .arraylist {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+
+        font-size: 72px;
+    }
+
     .module {
         background-color: rgba(0, 0, 0, 0.4);
         color: $accent-color;
+        font-family: 'Product Sans';
         font-size: 16px;
         padding: 2px 6px;
-        border-bottom-left-radius: 4px;
-        // border-right: solid 4px $accent-color;
+        border-right: solid 2px $accent-color;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-width: 5px;
         width: max-content;
         font-weight: 400;
         margin-left: auto;
-        text-shadow: $accent-color 0px 0px 2px, $accent-color 0px 0px 12px;
-        border-right: solid 2px $accent-color;
         text-transform: lowercase;
     }
 
-    .module:first-child {
-        border-top-left-radius: 8px;
-        border-top-right-radius: 8px;
-    }
-
-    .module:last-child {
-        border-bottom-left-radius: 8px;
-        border-bottom-right-radius: 8px;
-    }
 </style>
