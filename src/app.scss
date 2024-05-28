@@ -29,44 +29,17 @@
 }
 
 @font-face {
-    font-family: "Comfortaa";
-    src: url("./assets/font/comfortaa/Comfortaa.ttf") format("truetype");
+    font-family: "Product Sans";
+    src: url("./assets/font/product/Regular.ttf") format("truetype");
     font-style: normal;
+    font-weight: normal;
 }
 
 @font-face {
-    font-family: "SF-UI";
-    src: url("./assets/font/sf-ui/SFUIText-Light.ttf") format("truetype");
+    font-family: "Product Sans";
+    src: url("./assets/font/product/Bold.ttf") format("truetype");
     font-style: normal;
-    font-weight: 300;
-}
-
-@font-face {
-    font-family: "SF-UI";
-    src: url("./assets/font/sf-ui/SFUIText-Medium.ttf") format("truetype");
-    font-style: normal;
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: "SF-UI";
-    src: url("./assets/font/sf-ui/SFUIText-Regular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: 500;
-}
-
-@font-face {
-    font-family: "SF-UI";
-    src: url("./assets/font/sf-ui/SFUIText-Semibold.ttf") format("truetype");
-    font-style: normal;
-    font-weight: 600;
-}
-
-@font-face {
-    font-family: "SF-UI";
-    src: url("./assets/font/sf-ui/SFUIText-Bold.ttf") format("truetype");
-    font-style: normal;
-    font-weight: 700;
+    font-weight: bold;
 }
 
 * {
@@ -80,7 +53,7 @@
 }
 
 body {
-    font-family: "SF-UI", sans-serif;
+    font-family: "Product Sans", sans-serif;
     user-select: none;
     overflow: hidden;
 }

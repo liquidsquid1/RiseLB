@@ -6,10 +6,10 @@
 
     .watermark {
         color: $accent-color;
-        font-family: "Comfortaa";
-        font-weight: 400;
+        font-weight: normal;
         margin: 0;
         border: 0;
         font-size: 48px;
+        text-shadow: 0px 0px 4px $accent-color;
     }
 </style>
