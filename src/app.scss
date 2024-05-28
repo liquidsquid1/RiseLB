@@ -34,6 +34,11 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "Product Sans Medium";
+    src: url("./assets/font/product/product_sans_medium.ttf") format("opentype");
+    font-style: normal;
+}
 
 * {
     box-sizing: border-box;
