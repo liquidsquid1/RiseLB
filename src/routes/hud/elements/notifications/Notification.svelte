@@ -21,13 +21,13 @@
             "a c";
     grid-template-columns: max-content 1fr;
     column-gap: 10px;
-    background: rgba(0, 0, 20, 0.4);
+    background: rgba(0, 0, 0, 0.4);
     border-radius: 60px;
     width: 300px;
     overflow: hidden;
     padding: 10px;
     margin-bottom: 10px;
-    box-shadow: 0px 0px 4px 4px rgba(0, 0, 20, 0.4);
+    box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.4);
   }
 
   .icon {
