@@ -22,12 +22,11 @@
     grid-template-columns: max-content 1fr;
     column-gap: 10px;
     background: rgba(0, 0, 0, 0.4);
-    border-radius: 60px;
+    border-radius: 20px;
     width: 300px;
     overflow: hidden;
     padding: 10px;
     margin-bottom: 10px;
-    box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.4);
   }
 
   .icon {
@@ -35,7 +34,7 @@
     width: 40px;
     background-position: center;
     background-repeat: no-repeat;
-    border-radius: 50%;
+    border-radius: 15px;
     grid-area: a;
     transition: background-color 0.2s;
     position: relative;
@@ -94,15 +93,14 @@
 
   .title {
     grid-area: b;
-    font-size: 14px;
+    font-size: 15px;
     color: white;
-    font-weight: 700;
-    text-shadow: white 0px 0px 4px;
+    font-family: 'Product Sans Medium'
   }
 
   .message {
     grid-area: c;
-    font-size: 12px;
+    font-size: 14px;
     color: #cbd1e3;
   }
 </style>
