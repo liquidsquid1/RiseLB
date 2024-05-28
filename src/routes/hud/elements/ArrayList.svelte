@@ -48,23 +48,19 @@
 <style lang="scss">
     @import "../../../colors.scss";
 
-    .arraylist {
-        //position: fixed;
-        //top: 0;
-        //right: 0;
-    }
-
     .module {
         background-color: rgba(0, 0, 0, 0.4);
         color: $accent-color;
         font-size: 16px;
-        padding: 4px 6px;
+        padding: 2px 6px;
         border-bottom-left-radius: 4px;
         // border-right: solid 4px $accent-color;
         width: max-content;
         font-weight: 400;
         margin-left: auto;
         text-shadow: $accent-color 0px 0px 2px, $accent-color 0px 0px 12px;
+        border-right: solid 2px $accent-color;
+        text-transform: lowercase;
     }
 
     .module:first-child {
