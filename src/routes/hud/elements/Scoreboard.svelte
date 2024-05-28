@@ -40,6 +40,7 @@
     border-radius: 16px;
     overflow: hidden;
     font-size: 14px;
+    box-shadow: 0px 0px 4px 4px rgba(0,0,0,0.4);
   }
 
   .entries {
@@ -59,6 +60,5 @@
     padding: 7px 10px;
     color: $accent-color;
     text-shadow: $accent-color 0px 0px 16px;
-    font-size: 20px;
   }
 </style>

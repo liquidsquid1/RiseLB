@@ -184,6 +184,7 @@
   background-color: rgba(0, 0, 0, 0.4);
   position: relative;
   border-radius: 16px;
+  box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.4);
   overflow: hidden;
 
   .slider {
@@ -194,6 +195,7 @@
     border-radius: 16px;
     transition: ease-in left 0.1s;
     background-color: rgba(0, 0, 0, 0.4);
+    filter: blur(2px);
   }
 
   .slots {

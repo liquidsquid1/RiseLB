@@ -10,6 +10,6 @@
         font-weight: 400;
         margin: 0;
         border: 0;
-        font-size: 36px;
+        font-size: 48px;
     }
 </style>
