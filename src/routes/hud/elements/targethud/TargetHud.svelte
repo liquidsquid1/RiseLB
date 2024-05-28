@@ -34,17 +34,7 @@
                 <img src="{REST_BASE}/api/v1/client/resource/skin?uuid={target.uuid}" alt="avatar" />
             </div>
     
-            <div class="name">{target.username}</div>
-            <div class="health-stats">
-                <div class="stat">
-                    <div class="value">{Math.floor(target.actualHealth + target.absorption)}</div>
-                    <img
-                            class="icon"
-                            src="img/hud/targethud/icon-health.svg"
-                            alt="health"
-                    />
-                </div>
-            </div>
+            <div class="name">Name: </div><a class="name1">{target.username}</a>
         </div>    
         
         <HealthProgress maxHealth={target.maxHealth + target.absorption} health={target.actualHealth + target.absorption} />
@@ -58,13 +48,13 @@
         //position: fixed;
         //top: 50%;
         //left: calc(50% + 20px);
-        //transform: translateY(-50%); // overwrites the component transform
         width: 220px;
         background-color: rgba(0, 0, 0, 0.4);
-        border-radius: 12px;
+        border-radius: 20px;
         overflow: hidden;
         border-bottom: 3px;
         animation: 0.5s fade;
+        max-height: 72px;
     }
 
     .main-wrapper {
@@ -81,10 +71,21 @@
     .name {
         grid-area: a;
         color: $targethud-text-color;
-        font-weight: 500;
         align-self: flex-start;
         padding-left: 58px;
         padding-top: 5px;
+        font-family: 'Product Sans';
+    }
+
+    .name1 {
+        grid-area: a;
+        color: $targethud-text-color;
+        align-self: flex-start;
+        padding-left: 108px;
+        padding-top: 5px;
+        color: $accent-color;
+        font-family: 'Product Sans Medium';
+        text-shadow:1px 1px 10px #fff, 1px 1px 10px #ccc;
     }
 
     .health-stats {
@@ -115,6 +116,7 @@
         background-size: cover;
         border-radius: 6px;
         overflow: hidden;
+        padding-left: 5px;
 
         img {
             position: absolute;

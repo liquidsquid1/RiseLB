@@ -15,13 +15,17 @@
 
     .health-progress {
         position: relative;
-        border-radius: 12px;
+        bottom: 25px;
+        left: 31%;
+        border-radius: 20px;
+        box-shadow: $accent-color 0px 5px 25px;
+        max-width: 60%;
     }
 
     .thumb {
-        height: 8px;
+        height: 14px;
         background-color: $accent-color;
         transition: ease width 0.5s;
-        border-radius: 12px;
+        border-radius: 20px;
     }
 </style>
