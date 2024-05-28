@@ -19,7 +19,7 @@
         left: 31%;
         border-radius: 20px;
         box-shadow: $accent-color 0px 5px 25px;
-        max-width: 60%;
+        max-width: 50%;
     }
 
     .thumb {
