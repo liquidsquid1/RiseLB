@@ -48,13 +48,11 @@
 </script>
 
 <div class="notifications">
-    {#each notifications as {title, message, severity, animationKey} (animationKey)}
-        <div
-                animate:flip={{ duration: 200 }}
-                in:fade={{ duration: 200 }}
-                out:fade={{ duration: 200 }}
-        >
-            <Notification {title} {message} {severity}/>
-        </div>
-    {/each}
+    {#if notifications.length > 0}
+        {#each notifications.reverse().slice(0, 1) as {title, message, severity, animationKey} (animationKey)}
+            <div animate:flip={{ duration: 200 }} in:fade={{ duration: 200 }} out:fade={{ duration: 200 }}>
+                <Notification {title} {message} {severity}/>
+            </div>
+        {/each}
+    {/if}
 </div>

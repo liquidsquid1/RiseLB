@@ -150,7 +150,7 @@
         display: inline;
 
         &.allow-preformatting {
-            font-family: "SF UI";
+            font-family: "Product Sans";
             white-space: pre;
         }
 
