@@ -11,6 +11,9 @@
 </div>
 
 <style lang="scss">
+
+  @import "../../../../colors.scss";
+
   .notification {
     display: grid;
     grid-template-areas:
@@ -18,12 +21,13 @@
             "a c";
     grid-template-columns: max-content 1fr;
     column-gap: 10px;
-    background: rgba(0, 0, 0, 0.68);
-    border-radius: 5px;
+    background: rgba(0, 0, 20, 0.4);
+    border-radius: 60px;
     width: 300px;
     overflow: hidden;
     padding: 10px;
     margin-bottom: 10px;
+    box-shadow: 0px 0px 4px 4px rgba(0, 0, 20, 0.4);
   }
 
   .icon {
@@ -31,7 +35,7 @@
     width: 40px;
     background-position: center;
     background-repeat: no-repeat;
-    border-radius: 4px;
+    border-radius: 50%;
     grid-area: a;
     transition: background-color 0.2s;
     position: relative;
@@ -39,16 +43,19 @@
     &.success {
       background-color: #4dac68;
       background-image: url("/img/hud/notification/icon-success.svg");
+      box-shadow: 0px 0px 105px 45px rgba(45,255,196,0.9);
     }
 
     &.error {
       background-color: #fc4130;
       background-image: url("/img/hud/notification/icon-error.svg");
+      box-shadow: 0 0 0 4px #fc4130;
     }
 
     &.info {
       background-color: #4677ff;
       background-image: url("/img/hud/notification/icon-info.svg");
+      box-shadow: 0 0 0 4px #4677ff;
     }
 
     &.disabled,
@@ -89,7 +96,8 @@
     grid-area: b;
     font-size: 14px;
     color: white;
-    font-weight: 600;
+    font-weight: 700;
+    text-shadow: white 0px 0px 4px;
   }
 
   .message {

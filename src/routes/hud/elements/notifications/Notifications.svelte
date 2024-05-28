@@ -1,7 +1,7 @@
 <script lang="ts">
     import {flip} from "svelte/animate";
     import {listen} from "../../../../integration/ws";
-    import {fly} from "svelte/transition";
+    import {fade} from "svelte/transition";
     import Notification from "./Notification.svelte";
     import type {NotificationEvent} from "../../../../integration/events";
 
@@ -51,8 +51,8 @@
     {#each notifications as {title, message, severity, animationKey} (animationKey)}
         <div
                 animate:flip={{ duration: 200 }}
-                in:fly={{ x: 30, duration: 200 }}
-                out:fly={{ x: 30, duration: 200 }}
+                in:fade={{ duration: 200 }}
+                out:fade={{ duration: 200 }}
         >
             <Notification {title} {message} {severity}/>
         </div>
