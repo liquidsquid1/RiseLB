@@ -21,7 +21,7 @@
             "a c";
     grid-template-columns: max-content 1fr;
     column-gap: 10px;
-    background: rgba(0, 0, 20, 0.4);
+    background: rgba(0, 0, 0, 0.4);
     border-radius: 20px;
     width: 300px;
     overflow: hidden;
