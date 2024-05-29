@@ -51,7 +51,7 @@
 <div class="arraylist" id="arraylist">
     {#each enabledModules as { name } (name)}
         <div class="module" id="module-name" animate:flip={{ duration: 200 }} in:fly={{ x: 50, duration: 200 }}>
-            {$spaceSeperatedNames ? convertToSpacedString(name) : name} <a class="prefix">{prefixs.get(name)}</a> <a class="side-bar" id="side-bar"></a>
+            {$spaceSeperatedNames ? convertToSpacedString(name) : name} <span class="prefix">{prefixs.get(name)}</span> <span class="side-bar" id="side-bar"></span>
         </div>
     {/each}
 </div>
