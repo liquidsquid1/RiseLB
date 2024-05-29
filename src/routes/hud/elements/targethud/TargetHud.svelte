@@ -85,7 +85,7 @@
         padding-top: 5px;
         color: $accent-color;
         font-family: 'Product Sans Medium';
-        text-shadow:1px 1px 10px #fff, 1px 1px 10px #ccc;
+        text-shadow:1px 1px 10px $accent-color, 1px 1px 10px $accent-color;
     }
 
     .health {
@@ -96,7 +96,7 @@
         padding-top: 29px;
         color: $accent-color;
         font-family: 'Product Sans Medium';
-        text-shadow:1px 1px 10px #fff, 1px 1px 10px #ccc;
+        text-shadow:1px 1px 10px $accent-color, 1px 1px 10px $accent-color;
     }
 
     .health-stats {

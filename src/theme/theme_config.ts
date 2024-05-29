@@ -4,7 +4,6 @@ import {writable} from "svelte/store";
 import type {SpaceSeperatedNamesChangeEvent} from "../integration/events";
 
 export let spaceSeperatedNames = writable(false);
-
 export function convertToSpacedString(name: string): string {
     const regex = /[A-Z]?[a-z]+|[0-9]+|[A-Z]+(?![a-z])/g;
     return (name.match(regex) as string[]).join(" ");
@@ -18,4 +17,5 @@ async function updateSettings() {
 listenAlways("spaceSeperatedNamesChange", (e: SpaceSeperatedNamesChangeEvent) => {
    spaceSeperatedNames.set(e.value);
 });
+
 updateSettings();

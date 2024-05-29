@@ -6,6 +6,7 @@ export interface Module {
     description: string;
     hidden: boolean;
     aliases: string[];
+    prefix: string;
 }
 
 export interface GroupedModules {
