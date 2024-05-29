@@ -46,13 +46,13 @@ const tSpeed = (0.04 / 20) * speed;
 export function arraylistGradient() {
     const arraylist = document.getElementById("arraylist");
     if (arraylist == null) return;
+    var color1 = window.getComputedStyle(arraylist).getPropertyValue("--accent-color").trim();
+    var color2 = window.getComputedStyle(arraylist).getPropertyValue("--accent-color-2").trim();
     const modules = arraylist.children as HTMLCollectionOf<HTMLElement>;
     for (let i = 0; i < modules.length; i++) {
         const element = modules[i];
         if (element.id != "module-name") continue;
         const percentage = 1 - (i / modules.length) + (.5 * Math.sin(.5 * i + progress));;
-        const color1 = "rgb(71, 148, 253)";
-        const color2 = "rgb(71, 253, 160)";
         const rgb = colorInterpolate(color1, color2, percentage);
         element.style.color = `rgb( ${rgb.r}, ${rgb.g}, ${rgb.b})`;
         
