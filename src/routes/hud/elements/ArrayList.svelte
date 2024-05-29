@@ -30,7 +30,7 @@
         );
     }
 
-    spaceSeperatedNames.subscribe(async () => {
+     spaceSeperatedNames.subscribe(async () => {
         await updateEnabledModules();
     });
 
@@ -69,7 +69,7 @@
     
 
     .module {
-        background-color: rgba(0, 0, 0, 0.4);
+        background-color: rgba(0, 0, 0, 0.54);
         color: $accent-color;
         font-family: 'Product Sans';
         font-size: 16px;
@@ -79,7 +79,19 @@
         margin-left: auto;
         
         text-transform: lowercase;
+        text-shadow: rgba(0, 0, 50, 0.6) .25px .25px;
+        border-bottom-left-radius: 3px;
     }
+
+    .module:first-child {
+        border-top-right-radius: 3px;
+        border-top-left-radius: 3px;
+    }
+
+    .module:last-child {
+        border-bottom-right-radius: 3px;
+    }
+
 
     .prefix {
         color: #AAAAAA;

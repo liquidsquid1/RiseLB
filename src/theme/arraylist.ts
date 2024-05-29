@@ -21,13 +21,15 @@ export async function getPrefixAsync(name: string) {
                 const cMode1 = mode1 as ChoiceSetting;
                 value = " " + cMode1.active;
             } else {
-                const cMode1 = mode2 as ChooseSetting;
-                value = " " + cMode1.value;
+                if (mode2 != null) {
+                    const cMode1 = mode2 as ChooseSetting;
+                    value = " " + cMode1.value;
+                }
             }
         }
     }
-    
-    if (value == "undefined") value = "";
+
+    if (value == undefined) value = "";
 
     return Promise.resolve(value);
 }
@@ -49,10 +51,16 @@ export function arraylistGradient() {
         const element = modules[i];
         if (element.id != "module-name") continue;
         const percentage = 1 - (i / modules.length) + (.5 * Math.sin(.5 * i + progress));;
-        const color1 = "rgb(185, 250, 255)";
-        const color2 = "rgb(79, 199, 200)";
+        const color1 = "rgb(71, 148, 253)";
+        const color2 = "rgb(71, 253, 160)";
         const rgb = colorInterpolate(color1, color2, percentage);
         element.style.color = `rgb( ${rgb.r}, ${rgb.g}, ${rgb.b})`;
+        
+        const sidebar = element.children as HTMLCollectionOf<HTMLElement>;
+        if (sidebar.length > 1) {
+            const bar = sidebar[1];
+            bar.style.borderColor =  element.style.color;
+        }
     }
 
     progress += tSpeed;
