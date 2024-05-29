@@ -83,7 +83,6 @@
         align-self: flex-start;
         padding-left: 108px;
         padding-top: 5px;
-        color: $targethud-text-color;
         font-family: 'Product Sans Medium';
     }
 
