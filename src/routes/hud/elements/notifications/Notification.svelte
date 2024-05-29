@@ -27,7 +27,6 @@
     overflow: hidden;
     padding: 10px;
     margin-bottom: 10px;
-    font-family: 'Product Sans';
   }
 
   .icon {
