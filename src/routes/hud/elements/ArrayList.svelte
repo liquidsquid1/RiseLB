@@ -59,6 +59,11 @@
 <style lang="scss">
     @import "../../../colors.scss";
 
+    :root {
+        --accent-color: #{$accent-color};
+        --accent-color-2: #{$accent-color-2};
+    }
+
     .arraylist {
         position: fixed;
         top: 10px;
@@ -67,7 +72,6 @@
         font-size: 72px;
     }
     
-
     .module {
         background-color: rgba(0, 0, 0, 0.54);
         color: $accent-color;
