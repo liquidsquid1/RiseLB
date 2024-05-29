@@ -27,6 +27,7 @@
     overflow: hidden;
     padding: 10px;
     margin-bottom: 10px;
+    font-family: 'Product Sans';
   }
 
   .icon {
@@ -40,20 +41,17 @@
     position: relative;
 
     &.success {
-      background-color: #4dac68;
-      background-image: url("/img/hud/notification/icon-success.svg");
+      background-color: white;
       box-shadow: 0px 0px 105px 45px rgba(45,255,196,0.9);
     }
 
     &.error {
-      background-color: #fc4130;
-      background-image: url("/img/hud/notification/icon-error.svg");
+      background-color: white;
       box-shadow: 0 0 0 4px #fc4130;
     }
 
     &.info {
-      background-color: #4677ff;
-      background-image: url("/img/hud/notification/icon-info.svg");
+      background-color: white;
       box-shadow: 0 0 0 4px #4677ff;
     }
 
@@ -71,11 +69,11 @@
         transition: all 0.2s ease-out;
       }
 
-      background-image: url("/img/hud/notification/icon-toggle.svg");
+      background-color: white;
     }
 
     &.enabled {
-      background-color: #4dac68;
+      background-color: white;
 
       &::after {
         left: 62%;
@@ -83,7 +81,7 @@
     }
 
     &.disabled {
-      background-color: #fc4130;
+      background-color: white;
 
       &::after {
         left: 38%;

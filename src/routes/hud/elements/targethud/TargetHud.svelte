@@ -34,7 +34,7 @@
                 <img src="{REST_BASE}/api/v1/client/resource/skin?uuid={target.uuid}" alt="avatar" />
             </div>
     
-            <div class="name">Name: </div><a class="name1">{target.username}</a><a class="health">{target.actualHealth}</a>
+            <div class="name">Name: </div><a class="name1">{target.username}</a><a class="health">{Math.round(target.actualHealth)}</a>
         </div>    
         
         <HealthProgress maxHealth={target.maxHealth + target.absorption} health={target.actualHealth + target.absorption} />
@@ -79,13 +79,11 @@
 
     .name1 {
         grid-area: a;
-        color: $targethud-text-color;
+        color: $accent-color;
         align-self: flex-start;
         padding-left: 108px;
         padding-top: 5px;
-        color: $accent-color;
         font-family: 'Product Sans Medium';
-        text-shadow:1px 1px 10px #fff, 1px 1px 10px #ccc;
     }
 
     .health {
@@ -96,7 +94,6 @@
         padding-top: 29px;
         color: $accent-color;
         font-family: 'Product Sans Medium';
-        text-shadow:1px 1px 10px #fff, 1px 1px 10px #ccc;
     }
 
     .health-stats {
