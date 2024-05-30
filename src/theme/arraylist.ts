@@ -1,7 +1,14 @@
 import { getModuleSettings } from "../integration/rest";
 import type { ChoiceSetting, ChooseSetting, ConfigurableSetting } from "../integration/types";
+import { mt } from "../renamer";
 
 let speed = 50;
+
+export function translateName(name: string): string {
+    console.log(name)
+    if (!mt.has(name)) return name;
+    return mt.get(name);
+}
 
 export async function getPrefixAsync(name: string) {
     const settings = await getModuleSettings(name);
