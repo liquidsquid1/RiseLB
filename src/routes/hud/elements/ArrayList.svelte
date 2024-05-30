@@ -7,7 +7,7 @@
     import {flip} from "svelte/animate";
     import {fly} from "svelte/transition";
     import {convertToSpacedString, spaceSeperatedNames} from "../../../theme/theme_config";
-    import {getPrefixAsync} from "../../../theme/arraylist";
+    import {getPrefixAsync, translateName} from "../../../theme/arraylist";
 
     let enabledModules: Module[] = [];
     let prefixs = new Map();
@@ -25,8 +25,8 @@
 
         enabledModules = enabledModules.sort(
                 (a, b) =>
-                    getTextWidth($spaceSeperatedNames ? (convertToSpacedString(b.name) + prefixs.get(b.name)).toLowerCase() : (b.name + prefixs.get(b.name)).toLowerCase(), "599 16px Product Sans") -
-                    getTextWidth($spaceSeperatedNames ? (convertToSpacedString(a.name) + prefixs.get(a.name)).toLowerCase() : (a.name + prefixs.get(a.name)).toLowerCase(), "599 16px Product Sans"),
+                    getTextWidth($spaceSeperatedNames ? (convertToSpacedString(translateName(b.name)) + prefixs.get(b.name)).toLowerCase() : (translateName(b.name) + prefixs.get(b.name)).toLowerCase(), "599 16px Product Sans") -
+                    getTextWidth($spaceSeperatedNames ? (convertToSpacedString(translateName(a.name)) + prefixs.get(a.name)).toLowerCase() : (translateName(a.name) + prefixs.get(a.name)).toLowerCase(), "599 16px Product Sans"),
         );
     }
 
@@ -51,7 +51,7 @@
 <div class="arraylist" id="arraylist">
     {#each enabledModules as { name } (name)}
         <div class="module" id="module-name" animate:flip={{ duration: 200 }} in:fly={{ x: 50, duration: 200 }}>
-            {$spaceSeperatedNames ? convertToSpacedString(name) : name} <span class="prefix">{prefixs.get(name)}</span> <span class="side-bar" id="side-bar"></span>
+            {$spaceSeperatedNames ? convertToSpacedString(translateName(name)) : translateName(name)} <span class="prefix">{prefixs.get(name)}</span> <span class="side-bar" id="side-bar"></span>
         </div>
     {/each}
 </div>
