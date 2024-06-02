@@ -35,8 +35,9 @@
 }
 
 @font-face {
-    font-family: "Product Sans Medium";
+    font-family: "Product Sans";
     src: url("./assets/font/product/product_sans_medium.ttf") format("opentype");
+    font-weight: medium;
     font-style: normal;
 }
 
@@ -51,7 +52,8 @@
 }
 
 body {
-    font-family: "SF UI", sans-serif;
+    font-family: "Product Sans", sans-serif;
+    font-weight: medium;
     user-select: none;
     overflow: hidden;
 }

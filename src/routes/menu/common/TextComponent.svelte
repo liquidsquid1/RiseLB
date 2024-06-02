@@ -151,6 +151,7 @@
 
         &.allow-preformatting {
             font-family: "Product Sans";
+            font-weight: medium;
             white-space: pre;
         }
 

@@ -6,7 +6,7 @@
 
     .watermark {
         font-family: "Product Sans";
-        font-weight: 400;
+        font-weight: medium;
         color: $accent-color;
         margin: 0;
         border: 0;
