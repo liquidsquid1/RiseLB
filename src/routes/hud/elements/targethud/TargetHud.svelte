@@ -83,7 +83,7 @@
         align-self: flex-start;
         padding-left: 108px;
         padding-top: 5px;
-        font-family: 'Product Sans Medium';
+        font-family: 'Product Sans';
     }
 
     .health {
@@ -93,7 +93,7 @@
         padding-left: 175px;
         padding-top: 29px;
         color: $accent-color;
-        font-family: 'Product Sans Medium';
+        font-family: 'Product Sans';
     }
 
     .avatar {

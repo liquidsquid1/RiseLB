@@ -93,7 +93,7 @@
     grid-area: b;
     font-size: 15px;
     color: white;
-    font-family: 'Product Sans Medium'
+    font-family: 'Product Sans'
   }
 
   .message {
