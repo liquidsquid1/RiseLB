@@ -49,12 +49,12 @@
         //top: 50%;
         //left: calc(50% + 20px);
         width: 220px;
-        background-color: rgba(0, 0, 0, 0.4);
+        background-color: rgba(0, 0, 0, 0.5);
         border-radius: 20px;
         overflow: hidden;
         border-bottom: 3px;
-        animation: 0.5s fade;
         max-height: 72px;
+        box-shadow: 0px 0px 20px rgba(black, 0.8);
     }
 
     .main-wrapper {

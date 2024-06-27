@@ -73,7 +73,7 @@
     }
     
     .module {
-        background-color: rgba(0, 0, 0, 0.54);
+        background-color: rgba(0, 0, 0, 0.5);
         color: $accent-color;
         font-family: 'Product Sans';
         font-size: 16px;
@@ -81,7 +81,7 @@
         width: max-content;
         font-weight: 599;
         margin-left: auto;
-        
+        box-shadow: -15px 0px 15px rgba(black, 0.35), 15px 0px 15px rgba(black, 0.35);
         text-transform: lowercase;
         text-shadow: rgba(0, 0, 50, 0.6) .25px .25px;
         border-bottom-left-radius: 3px;
@@ -90,12 +90,13 @@
     .module:first-child {
         border-top-right-radius: 3px;
         border-top-left-radius: 3px;
+        box-shadow: 0px -15px 15px rgba(black, 0.3), -15px 0px 15px 0px rgba(black, 0.3), 15px 0px 15px rgba(black, 0.3);
     }
 
     .module:last-child {
         border-bottom-right-radius: 3px;
+        box-shadow: 0px 15px 15px rgba(black, 0.3), -15px 0px 15px rgba(black, 0.3), 15px 0px 15px rgba(black, 0.3);
     }
-
 
     .prefix {
         color: #AAAAAA;
@@ -106,7 +107,6 @@
         border-right: solid 5px $accent-color;
         border-radius: 2px;
         padding-right: 10px;
-
         width: 13px;
         height: 20px;
     }
