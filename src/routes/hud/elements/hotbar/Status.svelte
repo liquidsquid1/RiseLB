@@ -35,6 +35,7 @@
     transform: translateY(-50%);
     padding: 4px 4px;
     text-shadow: $hotbar-text-color 0px 0px 4px;
+    box-shadow: 0px 0px 20px rgba(black, 0.8);
   }
 
   .icon {
